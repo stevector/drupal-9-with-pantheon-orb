@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "eb308b5824c4140c6f9d85d2680b750a",
+    "content-hash": "f42e0d2240a39aca3fc245bc8f3ae274",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -60,16 +60,16 @@
         },
         {
             "name": "chi-teck/drupal-code-generator",
-            "version": "1.31.0",
+            "version": "1.32.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/Chi-teck/drupal-code-generator.git",
-                "reference": "f994157721f238175be90171f0ccc1c0aa17c276"
+                "reference": "0e045f7a7e747af3d8f603156bf4d73be5768246"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Chi-teck/drupal-code-generator/zipball/f994157721f238175be90171f0ccc1c0aa17c276",
-                "reference": "f994157721f238175be90171f0ccc1c0aa17c276",
+                "url": "https://api.github.com/repos/Chi-teck/drupal-code-generator/zipball/0e045f7a7e747af3d8f603156bf4d73be5768246",
+                "reference": "0e045f7a7e747af3d8f603156bf4d73be5768246",
                 "shasum": ""
             },
             "require": {
@@ -101,7 +101,7 @@
                 "GPL-2.0-or-later"
             ],
             "description": "Drupal code generator",
-            "time": "2019-12-07T16:54:31+00:00"
+            "time": "2020-04-16T06:45:06+00:00"
         },
         {
             "name": "composer/installers",
@@ -700,22 +700,22 @@
         },
         {
             "name": "consolidation/self-update",
-            "version": "1.1.5",
+            "version": "1.2.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/consolidation/self-update.git",
-                "reference": "a1c273b14ce334789825a09d06d4c87c0a02ad54"
+                "reference": "dba6b2c0708f20fa3ba8008a2353b637578849b4"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/consolidation/self-update/zipball/a1c273b14ce334789825a09d06d4c87c0a02ad54",
-                "reference": "a1c273b14ce334789825a09d06d4c87c0a02ad54",
+                "url": "https://api.github.com/repos/consolidation/self-update/zipball/dba6b2c0708f20fa3ba8008a2353b637578849b4",
+                "reference": "dba6b2c0708f20fa3ba8008a2353b637578849b4",
                 "shasum": ""
             },
             "require": {
                 "php": ">=5.5.0",
-                "symfony/console": "^2.8|^3|^4",
-                "symfony/filesystem": "^2.5|^3|^4"
+                "symfony/console": "^2.8|^3|^4|^5",
+                "symfony/filesystem": "^2.5|^3|^4|^5"
             },
             "bin": [
                 "scripts/release"
@@ -737,16 +737,16 @@
             ],
             "authors": [
                 {
-                    "name": "Greg Anderson",
-                    "email": "greg.1.anderson@greenknowe.org"
-                },
-                {
                     "name": "Alexander Menk",
                     "email": "menk@mestrona.net"
+                },
+                {
+                    "name": "Greg Anderson",
+                    "email": "greg.1.anderson@greenknowe.org"
                 }
             ],
             "description": "Provides a self:update command for Symfony Console applications.",
-            "time": "2018-10-28T01:52:03+00:00"
+            "time": "2020-04-13T02:49:20+00:00"
         },
         {
             "name": "consolidation/site-alias",
@@ -1455,10 +1455,6 @@
                         "[web-root]/profiles/README.txt": "assets/scaffold/files/profiles.README.txt",
                         "[web-root]/themes/README.txt": "assets/scaffold/files/themes.README.txt"
                     }
-                },
-                "patches_applied": {
-                    "install failure": "https://raw.githubusercontent.com/stevector/drupal-9-project/master/patches/issue-1--core-install-error.patch",
-                    "db version": "https://raw.githubusercontent.com/stevector/drupal-9-project/master/patches/issue-2--mariadb-version.patch"
                 }
             },
             "autoload": {
@@ -1630,6 +1626,32 @@
             ],
             "description": "Locked core dependencies; require this project INSTEAD OF drupal/core.",
             "time": "2020-03-30T19:13:47+00:00"
+        },
+        {
+            "name": "drupal/mysql56",
+            "version": "dev-8.x-1.x--mariadb-10-0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/stevector/mysql56.git",
+                "reference": "76a40a07ccb95adc91905fd6a6becfd24218c928"
+            },
+            "require": {
+                "drupal/core": "9.0.*"
+            },
+            "type": "library",
+            "extra": {
+                "installer-name": "mysql"
+            },
+            "autoload": {
+                "psr-4": {
+                    "Drupal\\Driver\\Database\\mysql\\": ""
+                }
+            },
+            "license": [
+                "GPL-2.0+"
+            ],
+            "description": "MySQL 5.6 Driver for Drupal 9.0.",
+            "time": "2020-04-20T18:48:02+00:00"
         },
         {
             "name": "drush/drush",
@@ -2108,107 +2130,20 @@
             "dist": {
                 "type": "path",
                 "url": "upstream",
-                "reference": "c5ee4342b0dd3b15b85d427482810b1656520526",
+                "reference": "3738fdf9e4fef6095527656e10d6af627b1bcf04",
                 "shasum": null
             },
             "require": {
                 "cweagans/composer-patches": "^1.0",
                 "drupal/core-composer-scaffold": "^9",
                 "drupal/core-recommended": "^9",
+                "drupal/mysql56": "dev-8.x-1.x--mariadb-10-0",
                 "drush/drush": "^10",
                 "pantheon-systems/drupal-integrations": "^8",
                 "php": ">=7.1",
                 "zaporylie/composer-drupal-optimizations": "^1.1"
             },
             "type": "project"
-        },
-        {
-            "name": "jakub-onderka/php-console-color",
-            "version": "v0.2",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/JakubOnderka/PHP-Console-Color.git",
-                "reference": "d5deaecff52a0d61ccb613bb3804088da0307191"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/JakubOnderka/PHP-Console-Color/zipball/d5deaecff52a0d61ccb613bb3804088da0307191",
-                "reference": "d5deaecff52a0d61ccb613bb3804088da0307191",
-                "shasum": ""
-            },
-            "require": {
-                "php": ">=5.4.0"
-            },
-            "require-dev": {
-                "jakub-onderka/php-code-style": "1.0",
-                "jakub-onderka/php-parallel-lint": "1.0",
-                "jakub-onderka/php-var-dump-check": "0.*",
-                "phpunit/phpunit": "~4.3",
-                "squizlabs/php_codesniffer": "1.*"
-            },
-            "type": "library",
-            "autoload": {
-                "psr-4": {
-                    "JakubOnderka\\PhpConsoleColor\\": "src/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "BSD-2-Clause"
-            ],
-            "authors": [
-                {
-                    "name": "Jakub Onderka",
-                    "email": "jakub.onderka@gmail.com"
-                }
-            ],
-            "time": "2018-09-29T17:23:10+00:00"
-        },
-        {
-            "name": "jakub-onderka/php-console-highlighter",
-            "version": "v0.4",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/JakubOnderka/PHP-Console-Highlighter.git",
-                "reference": "9f7a229a69d52506914b4bc61bfdb199d90c5547"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/JakubOnderka/PHP-Console-Highlighter/zipball/9f7a229a69d52506914b4bc61bfdb199d90c5547",
-                "reference": "9f7a229a69d52506914b4bc61bfdb199d90c5547",
-                "shasum": ""
-            },
-            "require": {
-                "ext-tokenizer": "*",
-                "jakub-onderka/php-console-color": "~0.2",
-                "php": ">=5.4.0"
-            },
-            "require-dev": {
-                "jakub-onderka/php-code-style": "~1.0",
-                "jakub-onderka/php-parallel-lint": "~1.0",
-                "jakub-onderka/php-var-dump-check": "~0.1",
-                "phpunit/phpunit": "~4.0",
-                "squizlabs/php_codesniffer": "~1.5"
-            },
-            "type": "library",
-            "autoload": {
-                "psr-4": {
-                    "JakubOnderka\\PhpConsoleHighlighter\\": "src/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Jakub Onderka",
-                    "email": "acci@acci.cz",
-                    "homepage": "http://www.acci.cz/"
-                }
-            ],
-            "description": "Highlight PHP code in terminal",
-            "time": "2018-09-29T18:48:56+00:00"
         },
         {
             "name": "laminas/laminas-diactoros",
@@ -2646,16 +2581,16 @@
         },
         {
             "name": "nikic/php-parser",
-            "version": "v4.3.0",
+            "version": "v4.4.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/nikic/PHP-Parser.git",
-                "reference": "9a9981c347c5c49d6dfe5cf826bb882b824080dc"
+                "reference": "bd43ec7152eaaab3bd8c6d0aa95ceeb1df8ee120"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/nikic/PHP-Parser/zipball/9a9981c347c5c49d6dfe5cf826bb882b824080dc",
-                "reference": "9a9981c347c5c49d6dfe5cf826bb882b824080dc",
+                "url": "https://api.github.com/repos/nikic/PHP-Parser/zipball/bd43ec7152eaaab3bd8c6d0aa95ceeb1df8ee120",
+                "reference": "bd43ec7152eaaab3bd8c6d0aa95ceeb1df8ee120",
                 "shasum": ""
             },
             "require": {
@@ -2694,20 +2629,20 @@
                 "parser",
                 "php"
             ],
-            "time": "2019-11-08T13:50:10+00:00"
+            "time": "2020-04-10T16:34:50+00:00"
         },
         {
             "name": "pantheon-systems/drupal-integrations",
-            "version": "8.0.2",
+            "version": "8.0.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/pantheon-systems/drupal-integrations.git",
-                "reference": "7649ccfa0f26503ba250d94fd4c146f0feb1d2d3"
+                "reference": "0d352e1167a5b3575d886128c8f1fa796603ed9b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/pantheon-systems/drupal-integrations/zipball/7649ccfa0f26503ba250d94fd4c146f0feb1d2d3",
-                "reference": "7649ccfa0f26503ba250d94fd4c146f0feb1d2d3",
+                "url": "https://api.github.com/repos/pantheon-systems/drupal-integrations/zipball/0d352e1167a5b3575d886128c8f1fa796603ed9b",
+                "reference": "0d352e1167a5b3575d886128c8f1fa796603ed9b",
                 "shasum": ""
             },
             "conflict": {
@@ -2733,7 +2668,7 @@
                 "MIT"
             ],
             "description": "Add this project to any Drupal distribution based on drupal/core-composer-scaffold to enable it for use on Pantheon.",
-            "time": "2020-02-12T19:01:43+00:00"
+            "time": "2020-03-11T18:20:13+00:00"
         },
         {
             "name": "pear/archive_tar",
@@ -3147,23 +3082,22 @@
         },
         {
             "name": "psy/psysh",
-            "version": "v0.10.2",
+            "version": "v0.10.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/bobthecow/psysh.git",
-                "reference": "573c2362c3cdebe846b4adae4b630eecb350afd8"
+                "reference": "2bde2fa03e05dff0aee834598b951d6fc7c6fe02"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/bobthecow/psysh/zipball/573c2362c3cdebe846b4adae4b630eecb350afd8",
-                "reference": "573c2362c3cdebe846b4adae4b630eecb350afd8",
+                "url": "https://api.github.com/repos/bobthecow/psysh/zipball/2bde2fa03e05dff0aee834598b951d6fc7c6fe02",
+                "reference": "2bde2fa03e05dff0aee834598b951d6fc7c6fe02",
                 "shasum": ""
             },
             "require": {
                 "dnoegel/php-xdg-base-dir": "0.1.*",
                 "ext-json": "*",
                 "ext-tokenizer": "*",
-                "jakub-onderka/php-console-highlighter": "0.4.*|0.3.*",
                 "nikic/php-parser": "~4.0|~3.0|~2.0|~1.3",
                 "php": "^8.0 || ^7.0 || ^5.5.9",
                 "symfony/console": "~5.0|~4.0|~3.0|^2.4.2|~2.3.10",
@@ -3171,7 +3105,7 @@
             },
             "require-dev": {
                 "bamarni/composer-bin-plugin": "^1.2",
-                "hoa/console": "~3.16|~2.15"
+                "hoa/console": "3.17.*"
             },
             "suggest": {
                 "ext-pcntl": "Enabling the PCNTL extension makes PsySH a lot happier :)",
@@ -3216,7 +3150,7 @@
                 "interactive",
                 "shell"
             ],
-            "time": "2020-03-21T06:55:27+00:00"
+            "time": "2020-04-07T06:44:48+00:00"
         },
         {
             "name": "ralouphie/getallheaders",
@@ -5259,16 +5193,16 @@
         },
         {
             "name": "webmozart/assert",
-            "version": "1.7.0",
+            "version": "1.8.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/webmozart/assert.git",
-                "reference": "aed98a490f9a8f78468232db345ab9cf606cf598"
+                "reference": "ab2cb0b3b559010b75981b1bdce728da3ee90ad6"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/webmozart/assert/zipball/aed98a490f9a8f78468232db345ab9cf606cf598",
-                "reference": "aed98a490f9a8f78468232db345ab9cf606cf598",
+                "url": "https://api.github.com/repos/webmozart/assert/zipball/ab2cb0b3b559010b75981b1bdce728da3ee90ad6",
+                "reference": "ab2cb0b3b559010b75981b1bdce728da3ee90ad6",
                 "shasum": ""
             },
             "require": {
@@ -5276,7 +5210,7 @@
                 "symfony/polyfill-ctype": "^1.8"
             },
             "conflict": {
-                "vimeo/psalm": "<3.6.0"
+                "vimeo/psalm": "<3.9.1"
             },
             "require-dev": {
                 "phpunit/phpunit": "^4.8.36 || ^7.5.13"
@@ -5303,7 +5237,7 @@
                 "check",
                 "validate"
             ],
-            "time": "2020-02-14T12:15:55+00:00"
+            "time": "2020-04-18T12:12:48+00:00"
         },
         {
             "name": "webmozart/path-util",
