@@ -1,3 +1,7 @@
+DEPRECATED. use https://github.com/pantheon-systems/drupal-9-with-circleci-orb instead.
+
+--------------------
+
 # Experimental Repo For Running Drupal 9 with Pantheon's Build Tools and CircleCI Orb
 
 This repository is a stripped down version of the fuller [pantheon-systems/example-drops-8-composer](https://github.com/pantheon-systems/example-drops-8-composer) which shows how Drupal 8 can be run on Pantheon with various git hosts and CI services using [Pantheon's Build Tools](https://pantheon.io/docs/guides/build-tools). This repo shows only Drupal 9 + GitHub + Pantheon and uses Build Tools wrapped in [Pantheon CircleCI Orb](https://github.com/pantheon-systems/circleci-orb).
