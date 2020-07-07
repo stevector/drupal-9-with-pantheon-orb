@@ -11,6 +11,10 @@
         {
             "type": "path",
             "url": "upstream"
+        },
+        {
+            "type": "git",
+            "url": "https://github.com/stevector/mysql56.git"
         }
     ],
     "require": {
@@ -32,12 +36,6 @@
             "web/themes/contrib/{$name}": ["type:drupal-theme"],
             "drush/Commands/contrib/{$name}": ["type:drupal-drush"],
             "web/private/scripts/quicksilver/{$name}/": ["type:quicksilver-script"]
-        },
-        "patches": {
-            "drupal/core": {
-                "install failure": "https://raw.githubusercontent.com/stevector/drupal-9-project/master/patches/issue-1--core-install-error.patch",
-                "db version": "https://raw.githubusercontent.com/stevector/drupal-9-project/master/patches/issue-2--mariadb-version.patch"
-            }
         },
         "composer-exit-on-patch-failure": true,
         "patchLevel": {
